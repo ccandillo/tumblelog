@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for shoppinglist in shoppinglists %}
+      <h2><a href="{{ url_for('shoppinglists.detail', slug=shoppinglist.slug) }}">{{ shoppinglist.title }}</a></h2>
+      <p>
+        {{ shoppinglist.created_at.strftime('%H:%M %Y-%m-%d') }} |
+      </p>
+    {% endfor %}
+{% endblock %}
