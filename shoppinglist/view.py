@@ -2,7 +2,7 @@ from flask import Blueprint, request, redirect, render_template, url_for
 from flask.views import MethodView
 from shoppinglist.models import ShoppingList, Ingredient
 
-shoppinglists = Blueprint('posts', __name__, template_folder='templates')
+shoppinglists = Blueprint('shoppinglists', __name__, template_folder='templates')
 
 
 class ListView(MethodView):
